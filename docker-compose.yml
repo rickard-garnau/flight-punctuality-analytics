@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: dockerfile.dwh
+    image: ${ACR_LOGIN_SERVER}/dwh_pipeline:latest
     ports:
       - "3000:3000"
     env_file:
@@ -14,6 +15,7 @@ services:
     build:
       context: .
       dockerfile: dockerfile.dashboard
+    image: ${ACR_LOGIN_SERVER}/dashboard:latest
     ports:
       - "8501:8501"
     env_file:
